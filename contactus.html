@@ -29,19 +29,33 @@
 					<article id="main">
 						<header>
 							<h2>Contact Us</h2>
-							<p>Kindly use below detais to reach us.</p>
+							<p>Kindly use below form to reach us.</p>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
 
-								<section>
-									<h4>Email</h4>
-									<p>
-										project_sherlock@gmail.com
-									</p>
+								<div class="container">
+								  <form action="mailto:project_sherlock@gmail.com">
+								    <label for="fname">First Name</label>
+								    <input type="text" id="fname" name="firstname" placeholder="Your name"><br/>
 
-									<hr />
-									</section>
+								    <label for="lname">Last Name</label>
+								    <input type="text" id="lname" name="lastname" placeholder="Your last name"><br/>
+
+								    <label for="job">Occupation</label>
+								    <select id="job" name="job">
+								      <option value="Student">Student</option>
+								      <option value="Researcher">Researcher</option>
+								      <option value="PHD student">PHD student</option>
+								      <option value="Other">Other</option>
+								    </select><br/>
+
+								    <label for="subject">Message</label>
+								    <textarea id="subject" name="subject" placeholder="Please write your message here" style="height:200px"></textarea><br/>	
+
+								    <input type="submit" value="Submit">
+								  </form>
+								</div>
 					</article>
 
 				<!-- Footer -->
