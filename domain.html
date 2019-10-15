@@ -44,6 +44,24 @@
 										X13-VSA is a voice lie detector application. Most likely voice based portable polygraph application which is already quite popular commercial lie detector tool. This is developed by X13 Team. This application analyzes the people's voice and the stress level and verify the truth. It is called VSA (Voice Stress Analyzer) based lie detector, this method become popular since 1970 and widely use on secret government organization, insurance companies & police department. Since this application is a software application 98% cost effective according to their official website.
 									</p>
 
+									<h4>Research Gap</h4>
+									<p>Even though there are research attempts on fraudulent transactions, there is no complete solution for a banking environment. The specialty of our product is that, this consists of four modules. Facial, behavioral, vocal and transactional modules give a complete analysis of the whole banking scenario. Without focusing on one component, we can get all these four weights into account before determining whether there is going to be a fraud or not.</p>
+
+									<h4>Research Problem</h4>
+									<p>In the transaction component, what we are building is a machine learning model based on a data set. In this research area, the main problem is that most people can not find a real data set. Because transactional data are sensitive and private, most banks do not prefer to give out data sets even for research purposes. In all the existing research attempts, this is a main problem to be addressed.
+</p>
+
+									<h4>Research Objectives</h4>
+									<p>Our main objective of this research is to detect a fraud as early as possible. For that, we need a transaction module which should be efficient and accurate in predicting frauds. 
+
+As stated above, one of the most challenging parts of the transaction module is finding a data set. It should be a valid data set which gives crucial details of transactions, while giving a good number of transaction entries. After finding a dataset, we get the challenge of preprocessing the data. Before feeding the data to the machine learning model, there should be a certain format to the data.
+
+A suitable algorithm for the machine learning model is required to train the model using the acquired data set. This algorithm should be efficient in predicting and learning. There are  lots of machine learning algorithms that can be used for classification problems. But we need to  try many of them to find what is the best option for our problem.
+
+Finally, a system design that will be fast and accurate is needed to contain this trained model. The information flowing of the system should be simple yet efficient.
+</p>
+
+									
 									<h4>Methodology</h4>
 									<p>
 										Our solution is mainly focused for Financial Institutes. The aim of this system is to analyze the human facial expressions, behavioral patterns, voice patterns, background environment and human interaction with the environment and identify the possible anomalies. 
@@ -102,7 +120,17 @@ For the training of the machine learning model, logistic regression algorithm wa
 
 After training the model, there should be a way to persist the model for future use without having to retrain. A package called Joblib is used to do this task. joblib.dump persist an arbitrary Python object into one file. After dumping the model, it can be hosted in an api using flask (exposing the endpoint).
 access from frontend
-									</p><br/><br/>
+									</p>
+
+									<h4>Technologies Used</h4>
+									<p>Below technologies were used in the transaction module implementation.<br/><br/>
+1. Angular JS<br/>
+2. Python<br/>
+3. Jupyter Notebook<br/>
+4. Flask<br/><br/>
+
+When the bank customer comes into the counter, the cashier has to enter the details into the application. The front end of the application is developed using angular js because of the efficiency of development and usage. After the details are entered, these details are validated (field validation). After this phase, the data is flown to the flask endpoint exposed in the backend. The trained machine learning model is served at this backend in a python script. The details sent to this endpoint is received and entered into the machine learning model to predict whether these details show a possible fraudulent behaviour. After the prediction is done, the result is sent as a string value to the front end. Based on the return string value, the cashier will be notified whether this is a possible fraud or not.
+</p>
 
 									<hr />
 									</section>
